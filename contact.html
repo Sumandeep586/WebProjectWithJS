@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><span>Suman's Portfolio Project</span></div>
+            <div class="right">
+                <ul>
+                    <li><a href="home.html">Home Page </a></li>
+                    <li><a href="bio.html">Bio Page</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="other.html">Other Page</a></li>
+                    <li><a href="contact.html">Contact Page</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Me</h2>
+            </div><br>
+            <div class="container2">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="text">
+                            <th><h3>Email</h3></th>
+                            <p>isumandeep0000@gmail.com</p>
+                        </div>
+                    </div><br>
+                    <div class="box">
+                        <div class="text">
+                            <th><h3>Phone</h3></th>
+                            <p>+1(123)456789</p>
+                        </div>
+                    </div><br>
+                    <div class="box">
+                        <div class="text">
+                            <th><h3>Address</h3></th>
+                            <p>480 Sugar Road,<br>Toronto,Ontario</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form onsubmit="return validateForm()">
+                        <h2>Send Message</h2><br>
+                        <div class="inputBox">
+                            <input type="text" id="name" required="required">
+                            <span>Full Name</span>
+                        </div><br>
+                        <div class="inputBox">
+                            <input type="email" id="email" required="required">
+                            <span>Email</span>
+                        </div><br>
+                        <div class="inputBox">
+                            <textarea id="message" required="required"></textarea>
+                            <span>Type your message...</span>
+                        </div><br>
+                        <div class="inputBox">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer align="center">
+            <h2>Connect with me on <a href="https://www.instagram.com/suman_kaur950?igsh=MXE4OGh5cHJtcXN0bQ%3D%3D&utm_source=qr">Instagram</a>, <a href="https://snapchat.com/t/8JFdIqau">Snapchat</a>.</h2>
+        </footer>
+    </header>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (!name.trim()) {
+                alert("Full Name is required!");
+                return false;
+            }
+            if (!email.trim() || !email.includes("@")) {
+                alert("Please enter a valid email!");
+                return false;
+            }
+            if (!message.trim()) {
+                alert("Message cannot be empty!");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
